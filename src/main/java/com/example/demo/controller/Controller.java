@@ -23,4 +23,10 @@ public class Controller {
     public  String home1(){
         return "hellows";
     }
+    @PreAuthorize("hasRole('NORMAL')")
+    @GetMapping("/home1")
+    public  String home14e(){
+        return "hellows";
+    }
 }
+
