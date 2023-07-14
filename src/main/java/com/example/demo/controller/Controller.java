@@ -13,6 +13,11 @@ public class Controller {
     public  String home(){
         return "hello";
     }
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/home2")
+    public  String home2(){
+        return "hello";
+    }
   @PreAuthorize("hasRole('NORMAL')")
     @GetMapping("/home1")
     public  String home1(){
